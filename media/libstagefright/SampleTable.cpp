@@ -335,11 +335,8 @@ status_t SampleTable::setTimeToSampleParams(
     }
 
     mTimeToSampleCount = U32_AT(&header[4]);
-<<<<<<< HEAD
     uint64_t allocSize = (uint64_t)mTimeToSampleCount * 2 * sizeof(uint32_t);
-=======
-    uint64_t allocSize = mTimeToSampleCount * 2 * (uint64_t)sizeof(uint32_t);
->>>>>>> android-5.1.1_r13
+
     if (allocSize > SIZE_MAX) {
         return ERROR_OUT_OF_RANGE;
     }
@@ -387,11 +384,8 @@ status_t SampleTable::setCompositionTimeToSampleParams(
     }
 
     mNumCompositionTimeDeltaEntries = numEntries;
-<<<<<<< HEAD
     uint64_t allocSize = (uint64_t)numEntries * 2 * sizeof(uint32_t);
-=======
-    uint64_t allocSize = numEntries * 2 * (uint64_t)sizeof(uint32_t);
->>>>>>> android-5.1.1_r13
+
     if (allocSize > SIZE_MAX) {
         return ERROR_OUT_OF_RANGE;
     }
